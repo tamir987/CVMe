@@ -121,6 +121,24 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -159,6 +177,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\IoC\ContainerBootstrapper.cs" />
+    <Compile Include="App_Start\IoC\Installers\ControllersInstaller.cs" />
+    <Compile Include="App_Start\IoC\Plumbing\WindsorControllerFactory.cs" />
+    <Compile Include="App_Start\IoC\Plumbing\WindsorDependencyResolver.cs" />
+    <Compile Include="App_Start\IoC\Plumbing\WindsorDependencyScope.cs" />
     <Compile Include="App_Start\IoC\WindsorActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CVController.cs" />
@@ -184,6 +206,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CVMe.Common\CVMe.Common.csproj">
+      <Project>{4398844A-BA73-4BB2-A9C3-68129F3DCD36}</Project>
+      <Name>CVMe.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CVMe.DataObjects\CVMe.DataObjects.csproj">
       <Project>{0EB53DD3-8AAA-4B60-9ADB-74C7EA6461D1}</Project>
       <Name>CVMe.DataObjects</Name>

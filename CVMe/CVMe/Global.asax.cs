@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Castle.Windsor;
+using Castle.Windsor.Installer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

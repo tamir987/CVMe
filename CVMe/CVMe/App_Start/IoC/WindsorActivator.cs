@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using CVMe.App_Start.IoC;
 using WebActivatorEx;
 
 [assembly: PreApplicationStartMethod(typeof(WindsorActivator), "PreStart")]
