@@ -28,6 +28,7 @@ namespace CVMe.Controllers
             {
                 Name = request.Name
             };
+
             var xmlResult = _xmlGeneratorService.GenerateXml(xmlGeneratorRequest);
 
             if(!xmlResult.IsSuccess) return new CVResponse { IsSuccess = false };
