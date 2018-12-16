@@ -6,6 +6,9 @@ namespace CVMe.Services.FilePaths
 {
     public interface IFilePathService
     {
+        string DocFileName { get; }
+        string XsltFileName { get; }
+        string XmlFileName { get; }
         string CVOutputPath(string name);
         string TemplateFilePath(string templateName);
     }
@@ -17,6 +20,12 @@ namespace CVMe.Services.FilePaths
         {
             _applicationSettings = applicationSettings;
         }
+
+        public string DocFileName => ".doc";
+
+        public string XsltFileName => "xslt";
+
+        public string XmlFileName => "xml";
 
         public string CVOutputPath (string name)
         {

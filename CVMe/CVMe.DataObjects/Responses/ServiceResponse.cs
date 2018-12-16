@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CVMe.DataObjects.Responses
 {
-    public class CVResponse : ServiceResponse
+    public class ServiceResponse
     {
-
+        public bool IsSuccess { get; set; }
     }
 }

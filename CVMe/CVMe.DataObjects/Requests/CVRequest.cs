@@ -8,6 +8,8 @@ namespace CVMe.DataObjects.Requests
 {
     public class CVRequest
     {
+        public int TemplateId { get; set; }
+
         public string Name { get; set; }
     }
 }

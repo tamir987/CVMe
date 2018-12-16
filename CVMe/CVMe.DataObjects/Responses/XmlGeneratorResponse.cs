@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CVMe.DataObjects.Responses
 {
-    public class XmlGeneratorResponse
-    {
-        public bool IsSuccess { get; set; }
+    public class XmlGeneratorResponse : ServiceResponse
+    {  
+        public string Xml { get; set; }
     }
 }

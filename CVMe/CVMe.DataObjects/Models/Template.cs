@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CVMe.DataObjects.Responses
+namespace CVMe.DataObjects.Models
 {
-    public class CVResponse : ServiceResponse
+    public class Template
     {
-
+        public string TemplateName { get; set; }
     }
 }

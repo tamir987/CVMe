@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CVMe.DataObjects.Responses
 {
-    public class CVGeneratorResponse
+    public class CVGeneratorResponse : ServiceResponse
     {
-        public bool IsSuccess { get; set; }
+        public string CVFilePath { get; set; }
     }
 }

@@ -11,5 +11,7 @@ namespace CVMe.DataObjects.Requests
         public string Name { get; set; }
 
         public string Xml { get; set; }
+
+        public string TemplateName { get; set; }
     }
 }

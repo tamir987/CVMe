@@ -139,6 +139,8 @@
     <Compile Include="FilePaths\FilePathService.cs" />
     <Compile Include="IoC\ServicesInstaller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseBuilder\UnsuccessfulResponseBuilder.cs" />
+    <Compile Include="Templates\TemplateService.cs" />
     <Compile Include="Xml\XmlGeneratorService.cs" />
   </ItemGroup>
   <ItemGroup>
