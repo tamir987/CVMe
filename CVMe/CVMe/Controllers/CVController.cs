@@ -1,6 +1,7 @@
 ﻿using CVMe.DataObjects.Requests;
 using CVMe.DataObjects.Responses;
 using CVMe.Services.CV;
+using CVMe.Services.ResponseBuilder;
 using CVMe.Services.Templates;
 using CVMe.Services.Xml;
 using System;
@@ -22,12 +23,18 @@ namespace CVMe.Controllers
             try
             {
                 //ToDo : validate request
-                return new CVResponse { IsSuccess = false };
+                var result = _cvGeneratorService.GenerateCV(request);
+                if(!result.IsSuccess)
+                {
+                    //logger
+                    return UnsuccessfulResponseBuilder.BuildUnsuccessfulResponse<CVResponse>();
+                }
+                return new CVResponse { IsSuccess = true };
 
             }
             catch(Exception ex)
             {
-                return new CVResponse { IsSuccess = false };
+                return UnsuccessfulResponseBuilder.BuildUnsuccessfulResponse<CVResponse>();
             }
         }
     }
