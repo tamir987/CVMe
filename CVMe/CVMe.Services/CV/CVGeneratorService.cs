@@ -71,9 +71,7 @@ namespace CVMe.Services.CV
                 var templateFilePath = _filePathService.TemplateFilePath(request.TemplateName);
                 var templateDocFilePath = templateFilePath + _filePathService.DocFileName;
 
-
                 File.Copy(templateDocFilePath, outputDocumentPath, true);
-
 
                 using (WordprocessingDocument output = WordprocessingDocument.Open(outputDocumentPath, true))
                 {
