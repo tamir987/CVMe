@@ -43,7 +43,8 @@ namespace CVMe.Services.CV
             };
 
             var xmlResult = _xmlGeneratorService.GenerateXml(xmlGeneratorRequest);
-            if (!xmlResult.IsSuccess) return UnsuccessfulResponseBuilder.BuildUnsuccessfulResponse<CVGeneratorResponse>();
+            if (!xmlResult.IsSuccess)
+                return UnsuccessfulResponseBuilder.BuildUnsuccessfulResponse<CVGeneratorResponse>();
 
             var templateRequest = new TemplateRequest
             {
@@ -51,7 +52,8 @@ namespace CVMe.Services.CV
             };
 
             var templateResult = _templateService.GetTemplateById(templateRequest);
-            if (!templateResult.IsSuccess) return UnsuccessfulResponseBuilder.BuildUnsuccessfulResponse<CVGeneratorResponse>();
+            if (!templateResult.IsSuccess)
+                return UnsuccessfulResponseBuilder.BuildUnsuccessfulResponse<CVGeneratorResponse>();
 
             var cvGeneratorRequest = new CVGeneratorRequest
             {
