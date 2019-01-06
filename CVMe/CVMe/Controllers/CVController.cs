@@ -30,11 +30,11 @@ namespace CVMe.Controllers
             try
             {
                 _cvRequestValidator.ValidateAndThrow(request);
-                //ToDo : validate request
+                
                 var result = _cvGeneratorService.GenerateCV(request);
                 if(!result.IsSuccess)
                 {
-                    //logger
+                    
                     _loggerHelper.LogObject("CVController - GenerateCV : Couldn't generate cv.", LoggerOption.Error);
                     return UnsuccessfulResponseBuilder.BuildUnsuccessfulResponse<CVResponse>();
                 }
